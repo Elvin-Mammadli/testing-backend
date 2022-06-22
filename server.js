@@ -12,7 +12,7 @@ import cors from "cors";
 dotenv.config();
 connectDatabase()
 
-app.use(cors());
+
 
 mongoose
   .connect(process.env.MONGODB_URI)
@@ -24,6 +24,8 @@ mongoose
   });
 
 const app = express();
+
+app.use(cors());
 
 app.use(express.json());
 
