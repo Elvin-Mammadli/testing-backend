@@ -11,7 +11,8 @@ import connectDatabase from "./config/MongoDB.js";
 dotenv.config();
 connectDatabase()
 
-
+var cors = require("cors");
+app.use(cors());
 
 mongoose
   .connect(process.env.MONGODB_URI)
