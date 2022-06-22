@@ -7,11 +7,11 @@ import userRouter from "./routes/userRoutes.js";
 import orderRouter from "./routes/orderRoutes.js";
 import uploadRouter from "./routes/uploadRoutes.js";
 import connectDatabase from "./config/MongoDB.js";
+import cors from "cors";
 
 dotenv.config();
 connectDatabase()
 
-var cors = require("cors");
 app.use(cors());
 
 mongoose
